@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact list</title>
+	<link tyde="text/css" rel="stylesheet" href="index.css">
+	<script language="javascript">
+	      window.onload=function() { 
+	        var oBtn1 = document.getElementById("btn1")
+	      	var oText = document.getElementById("text")
+	      	var oText1 = document.getElementById("text1")
+	      	var oOne = document.getElementById("one")
+	      	var oTwo = document.getElementById("two")
+	      	var oThree = document.getElementById("three")
+	      	var oBtn2 = document.getElementById("btn2")
+	      	var oBtn3 = document.getElementById("btn3")
+	      	var oShow = document.getElementById("show")
+	      	oBtn1.onclick = function(){
+	      		oOne.innerHTML = oOne.innerHTML + oText.value +"<br/>";
+                oTwo.innerHTML = oTwo.innerHTML + oText1.value +"<br/>";
+                oThree.innerHTML = oThree.innerHTML + oThree.value +"<br/>";
+
+	      	};
+	      };
+	</script>
+</head>
+<body>	
+        <table>
+        	<caption>
+        		联系人列表
+        	</caption>
+        	<tr>
+        		<th>姓名</th>
+        		<th>电话</th>
+        		<th>操作</th>
+        	</tr>
+        	<tr id="show">        	
+        		<td id="one"></td>
+        		<td id="two"></td>
+        		<td id="three">
+        			<input id="btn2" type="button" value="修改">
+        			<input id="btn3" type="button" value="删除">	
+        		</td>
+        	</tr>
+        </table>
+     <span id="span1">姓名：</span>
+     <input id="text" type="text"/>
+     <span id="span2">电话：</span>
+     <input id="text1" type="text"/>
+     <input id="btn1" type="button" value="添加">
+</body>
+</html>
