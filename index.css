@@ -1,8 +1,23 @@
 table {
-	   margin-left: 20px;
-	   margin-right: 20px; 
-	   border: thin solid black;
-}
-td, th{
-	   padding: 30px;
-}
+       border-collapse:collapse;
+       width: 100%;
+    }
+th {
+	height: 50px;
+	background-color:blue;
+
+    }
+td {
+	text-align:center;
+	height: 50px;
+	background-color:green;
+    }
+
+table,td, th{
+	   border: 1px solid black;
+	   text-align:bottom;
+	}
+
+#btn2 {
+	   visibility: hidden;
+	}
