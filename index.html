@@ -12,18 +12,28 @@
 	      	var oTwo = document.getElementById("two")
 	      	var oThree = document.getElementById("three")
 	      	var oBtn2 = document.getElementById("btn2")
-	      	var oBtn3 = document.getElementById("btn3")
+	      	var oBtn21 = document.getElementById("btn21")
+            var oBtn22 = document.getElementById("btn22")
 	      	var oShow = document.getElementById("show")
+            
 	      	oBtn1.onclick = function(){
 	      		oOne.innerHTML = oOne.innerHTML + oText.value +"<br/>";
                 oTwo.innerHTML = oTwo.innerHTML + oText1.value +"<br/>";
-                oThree.innerHTML = oThree.innerHTML;
+                oThree.innerHTML = oThree.innerHTML + oBtn2.innerHTML + "<br/>";
+                oText.value = "";
+                oText1.value = "";
 
 	      	};
+
 	      };
+
 	</script>
 </head>
 <body>	
+        <p id="btn2">
+            <input id="btn21" type="button" value="修改">
+            <input id="btn22" type="button" value="删除">
+        </p>
         <table>
         	<caption>
         		联系人列表
@@ -34,18 +44,35 @@
         		<th>操作</th>
         	</tr>
         	<tr id="show">        	
-        		<td id="one"></td>
-        		<td id="two"></td>
-        		<td id="three">
-        			<input id="btn2" type="button" value="修改">
-        			<input id="btn3" type="button" value="删除">	
-        		</td>
+        		<td id="one"> </td>
+        		<td id="two"> </td>
+        		<td id="three"> </td>
         	</tr>
+            <tr id="show1">          
+                <td id="one1"> </td>
+                <td id="two2"> </td>
+                <td id="three3"> </td>
+            </tr>
+            <tr id="show2">          
+                <td id="one11"> </td>
+                <td id="two22"> </td>
+                <td id="three33"> </td>
+            </tr>
+            <tr id="show2">          
+                <td id="one11"> 
+                    <span id="span1">姓名：</span>
+                    <input id="text" type="text"/>
+                </td>
+                <td id="two22"> 
+                    <span id="span2">电话：</span>
+                    <input id="text1" type="text"/>
+                </td>
+                <td id="three33"> 
+                    <input id="btn1" type="button" value="添加">
+                    <input id="btn1" type="button" value="清空">
+                </td>
+            </tr>
+
         </table>
-     <span id="span1">姓名：</span>
-     <input id="text" type="text"/>
-     <span id="span2">电话：</span>
-     <input id="text1" type="text"/>
-     <input id="btn1" type="button" value="添加">
 </body>
 </html>
