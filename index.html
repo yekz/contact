@@ -8,31 +8,64 @@
 	        var oBtn1 = document.getElementById("btn1")
 	      	var oText = document.getElementById("text")
 	      	var oText1 = document.getElementById("text1")
-	      	var oOne = document.getElementById("one")
-	      	var oTwo = document.getElementById("two")
-	      	var oThree = document.getElementById("three")
+	      	var oOne0 = document.getElementById("one0")
+            var oOne1 = document.getElementById("one1")
+            var oOne2 = document.getElementById("one2")
+	      	var oTwo0 = document.getElementById("two0")
+            var oTwo1 = document.getElementById("two1")
+            var oTwo2 = document.getElementById("two2")
+	      	var oThree0 = document.getElementById("three0")
+            var oThree1 = document.getElementById("three1")
+            var oThree2 = document.getElementById("three2")
 	      	var oBtn2 = document.getElementById("btn2")
-	      	var oBtn21 = document.getElementById("btn21")
-            var oBtn22 = document.getElementById("btn22")
-	      	var oShow = document.getElementById("show")
-            
+	      	var oBtn3 = document.getElementById("btn3")
+            var oBtn4 = document.getElementById("btn4")
+	      	var oBtn5 = document.getElementById("btn5")
+            var oBtn6 = document.getElementById("btn6")
+            var oBtn7 = document.getElementById("btn7")
+            var oBtn8 = document.getElementById("btn8")
+            var oShow1 = document.getElementById("show1")
+            var oShow2 = document.getElementById("show2")
+            var oShow3 = document.getElementById("show3")
+
+
+
 	      	oBtn1.onclick = function(){
-	      		oOne.innerHTML = oOne.innerHTML + oText.value +"<br/>";
-                oTwo.innerHTML = oTwo.innerHTML + oText1.value +"<br/>";
-                oThree.innerHTML = oThree.innerHTML + oBtn2.innerHTML + "<br/>";
+	      		oOne2.innerHTML = oText.value +"<br/>";
+                oTwo2.innerHTML = oText1.value +"<br/>";
+                oThree2.innerHTML = oBtn2.innerHTML + "<br/>";
                 oText.value = "";
                 oText1.value = "";
 
 	      	};
+            /*oBtn5.onclick = function(){
+                oOne0.innerHTML = "";
+                oTwo0.innerHTML = "";
+                oThree0.innerHTML = "";
+                oOne1.innerHTML = "";
+                oTwo1.innerHTML = "";
+                oThree1.innerHTML = ""; 
+                oOne2.innerHTML = "";
+                oTwo2.innerHTML = "";
+                oThree2.innerHTML = "";               
+            };*/
+            };
 
-	      };
+            $(document).ready(function(){
+            $("#btn6").click(function(){
+            $("show1").fadeOut()
+             });
+            $("#btn5").click(function(){
+            $("show1").fadeIn();
+            });
+            });
 
 	</script>
 </head>
 <body>	
         <p id="btn2">
-            <input id="btn21" type="button" value="修改">
-            <input id="btn22" type="button" value="删除">
+            <input id="btn3" type="button" value="修改">
+            <input id="btn4" type="button" value="删除">
         </p>
         <table>
         	<caption>
@@ -43,22 +76,28 @@
         		<th>电话</th>
         		<th>操作</th>
         	</tr>
-        	<tr id="show">        	
-        		<td id="one"> </td>
-        		<td id="two"> </td>
-        		<td id="three"> </td>
+        	<tr id="show1">        	
+        		<td id="one0">周迅</td>
+        		<td id="two0">13547093222</td>
+        		<td id="three0"> 
+            <input id="btn5" type="button" value="修改">
+            <input id="btn6" type="button" value="删除">
+                </td>
         	</tr>
-            <tr id="show1">          
-                <td id="one1"> </td>
+            <tr id="show2">          
+                <td id="one1">科忠</td>
+                <td id="two1">12345677711</td>
+                <td id="three1"> 
+            <input id="btn7" type="button" value="修改">
+            <input id="btn8" type="button" value="删除">
+                </td>
+            </tr>
+            <tr id="show3">          
+                <td id="one2"> </td>
                 <td id="two2"> </td>
-                <td id="three3"> </td>
+                <td id="three2"> </td>
             </tr>
-            <tr id="show2">          
-                <td id="one11"> </td>
-                <td id="two22"> </td>
-                <td id="three33"> </td>
-            </tr>
-            <tr id="show2">          
+            <tr id="show">          
                 <td id="one11"> 
                     <span id="span1">姓名：</span>
                     <input id="text" type="text"/>
@@ -69,7 +108,6 @@
                 </td>
                 <td id="three33"> 
                     <input id="btn1" type="button" value="添加">
-                    <input id="btn1" type="button" value="清空">
                 </td>
             </tr>
 
