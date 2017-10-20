@@ -3,7 +3,7 @@
 <head>
 	<title>Contact list</title>
 	<link tyde="text/css" rel="stylesheet" href="index.css">
-	<script language="javascript" src="jquery-3.2.1.min.js">
+	<script language="javascript">
 	      window.onload=function() { 
 	        var oBtn1 = document.getElementById("btn1")
 	      	var oText = document.getElementById("text")
@@ -28,38 +28,32 @@
             var oShow2 = document.getElementById("show2")
             var oShow3 = document.getElementById("show3")
 
-
-
 	      	oBtn1.onclick = function(){
-	      		oOne2.innerHTML = oText.value +"<br/>";
-                oTwo2.innerHTML = oText1.value +"<br/>";
-                oThree2.innerHTML = oBtn2.innerHTML + "<br/>";
+	      		oOne2.innerHTML = oText.value;
+                oTwo2.innerHTML = oText1.value;
+                oThree2.innerHTML = oBtn2.innerHTML;
                 oText.value = "";
                 oText1.value = "";
-
-	      	};
-            /*oBtn5.onclick = function(){
+            };
+            oBtn6.onclick = function(){
+                oShow1.innerHTML = "";
+            };
+            oBtn8.onclick = function(){
+                oShow2.innerHTML = "";
+            };
+            oBtn5.onclick = function(){
                 oOne0.innerHTML = "";
                 oTwo0.innerHTML = "";
-                oThree0.innerHTML = "";
+            };
+            oBtn7.onclick = function(){
                 oOne1.innerHTML = "";
                 oTwo1.innerHTML = "";
-                oThree1.innerHTML = ""; 
-                oOne2.innerHTML = "";
-                oTwo2.innerHTML = "";
-                oThree2.innerHTML = "";               
-            };*/
             };
-
-            $(document).ready(function(){
-              $("#btn6").click(function(){
-              $("#show1").fadeOut()
-             });
-             });
-          
+            };      
 	</script>
 </head>
 <body>	
+    <div id="biaoge">
         <p id="btn2">
             <input id="btn3" type="button" value="修改">
             <input id="btn4" type="button" value="删除">
@@ -109,5 +103,6 @@
             </tr>
 
         </table>
+    </div>
 </body>
 </html>
