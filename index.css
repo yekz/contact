@@ -4,6 +4,7 @@ table {
     }
 th {
 	height: 50px;
+	width: 200px;
 	background-color:blue;
 
     }
@@ -21,3 +22,6 @@ table,td, th{
 #btn2 {
 	   visibility: hidden;
 	}
+#biaoge {
+	width: 700px;
+}
