@@ -3,7 +3,7 @@
 <head>
 	<title>Contact list</title>
 	<link tyde="text/css" rel="stylesheet" href="index.css">
-	<script language="javascript">
+	<script language="javascript" src="jquery-3.2.1.min.js">
 	      window.onload=function() { 
 	        var oBtn1 = document.getElementById("btn1")
 	      	var oText = document.getElementById("text")
@@ -52,14 +52,11 @@
             };
 
             $(document).ready(function(){
-            $("#btn6").click(function(){
-            $("show1").fadeOut()
+              $("#btn6").click(function(){
+              $("#show1").fadeOut()
              });
-            $("#btn5").click(function(){
-            $("show1").fadeIn();
-            });
-            });
-
+             });
+          
 	</script>
 </head>
 <body>	
