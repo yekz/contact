@@ -3,53 +3,23 @@
 <head>
 	<title>Contact list</title>
 	<link tyde="text/css" rel="stylesheet" href="index.css">
-	<script language="javascript">
-	      window.onload=function() { 
-	        var oBtn1 = document.getElementById("btn1")
-	      	var oText = document.getElementById("text")
-	      	var oText1 = document.getElementById("text1")
-	      	var oOne0 = document.getElementById("one0")
-            var oOne1 = document.getElementById("one1")
-            var oOne2 = document.getElementById("one2")
-	      	var oTwo0 = document.getElementById("two0")
-            var oTwo1 = document.getElementById("two1")
-            var oTwo2 = document.getElementById("two2")
-	      	var oThree0 = document.getElementById("three0")
-            var oThree1 = document.getElementById("three1")
-            var oThree2 = document.getElementById("three2")
-	      	var oBtn2 = document.getElementById("btn2")
-	      	var oBtn3 = document.getElementById("btn3")
-            var oBtn4 = document.getElementById("btn4")
-	      	var oBtn5 = document.getElementById("btn5")
-            var oBtn6 = document.getElementById("btn6")
-            var oBtn7 = document.getElementById("btn7")
-            var oBtn8 = document.getElementById("btn8")
-            var oShow1 = document.getElementById("show1")
-            var oShow2 = document.getElementById("show2")
-            var oShow3 = document.getElementById("show3")
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+                $("#btn6").click(function(){
+                    $("#show1").fadeOut(2000);
+                });
+                $("#btn8").click(function(){
+                    $("#show2").fadeOut(2000);
+                });
+                $("#btn1").click(function(){
+                    $("#one2").append($("#text").val());
+                    $("#two2").append($("#text1").val());
+                    $("#three2").append($("#btn2").html());
 
-	      	oBtn1.onclick = function(){
-	      		oOne2.innerHTML = oText.value;
-                oTwo2.innerHTML = oText1.value;
-                oThree2.innerHTML = oBtn2.innerHTML;
-                oText.value = "";
-                oText1.value = "";
-            };
-            oBtn6.onclick = function(){
-                oShow1.innerHTML = "";
-            };
-            oBtn8.onclick = function(){
-                oShow2.innerHTML = "";
-            };
-            oBtn5.onclick = function(){
-                oOne0.innerHTML = "";
-                oTwo0.innerHTML = "";
-            };
-            oBtn7.onclick = function(){
-                oOne1.innerHTML = "";
-                oTwo1.innerHTML = "";
-            };
-            };      
+                })
+
+            });   
 	</script>
 </head>
 <body>	
