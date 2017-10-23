@@ -52,6 +52,4 @@
 2017.10.23
 1，解决了提交的问题，但是提示：Uncaught TypeError: Cannot set property 'innerHTML' of null?
 2，删除document.getElementById()后问题解决，但是不知道为什么？
-
-
-
+3，不能定位用html（）添加的input元素*************
