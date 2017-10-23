@@ -14,16 +14,16 @@
                 });
 
             $("#btn1").click(function(){
-                function submit(){
+                if (checkall()){
+                    document.getElementById("#show3").innerHTML = functionName();
+                };
+                function functionName(){
                     $("#one2").append($("#text").val());
                     $("#two2").append($("#text1").val());
                     $("#three2").append($("#btn2").html());
                     $("#text").val("");
                     $("#text1").val("");
-                }
-                if (checkall()){
-                    $("#show3").submit();
-                }
+                };
                  });
                 function checkall(){
                     var name = $("#text");
