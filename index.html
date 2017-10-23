@@ -12,11 +12,32 @@
                 $("#btn8").click(function(){
                     $("#show2").fadeOut(1000);
                 });
-                $("#three2,#btn2,#btn4").click(function(){
+                $("#superbtn").click(function(){
                     $("#show3").fadeOut(1000);
                 });
-
-            $("#btn1").click(function(){
+                $("#btn5").click(function(){
+                    $("#one0").html("<input type=text>");
+                    $("#two0").html("<input type=text>");
+                    $("#btn5").val("确认修改");
+                });
+                $("#btn7").click(function(){
+                    $("#one1").html("<input type=text>");
+                    $("#two1").html("<input type=text>");
+                    $("#btn7").val("确认修改");
+                });
+                $("#btn1").click(function(){
+                if (checkall()){
+                    "#show3".innerHTML = functionName();
+                };
+                function functionName(){
+                    $("#one2").append($("#text").val());
+                    $("#two2").append($("#text1").val());
+                    $("#three2").append($("#btn2").html());
+                    $("#text").val("");
+                    $("#text1").val("");
+                };
+                 });
+                $("#btn1").click(function(){
                 if (checkall()){
                     "#show3".innerHTML = functionName();
                 };
@@ -49,7 +70,7 @@
     <div id="biaoge">
         <p id="btn2">
             <input id="btn3" type="button" value="修改">
-            <input id="btn4" type="button" value="删除">
+            <input id="superbtn" type="button" value="删除">
         </p>
         <table>
         	<caption>
@@ -88,7 +109,7 @@
                 </td>
                 <td id="two22"> 
                     <span id="span2">电话：</span>
-                    <input id="text1" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" 
+                    <input id="text1" type="text" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')" 
            onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
                 </td>
                 <td id="three33"> 
