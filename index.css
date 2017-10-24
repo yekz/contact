@@ -1,27 +1,26 @@
 table {
-       border-collapse:collapse;
-       width: 100%;
-    }
+   border-collapse: collapse;
+   width: 100%;
+}
 th {
-	height: 50px;
-	width: 200px;
-	background-color:blue;
-
-    }
+    height: 50px;
+    width: 200px;
+    background-color: blue;
+}
 td {
-	text-align:center;
-	height: 50px;
-	background-color:green;
-    }
+    text-align: center;
+    height: 50px;
+    background-color: green;
+}
 
-table,td, th{
-	   border: 1px solid black;
-	   text-align:bottom;
-	}
+table, td, th {
+   border: 1px solid black;
+   text-align: bottom;
+}
 
 #btn2 {
-	   visibility: hidden;
-	}
+   visibility: hidden;
+}
 #biaoge {
-	width: 700px;
+    width: 700px;
 }

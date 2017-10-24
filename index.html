@@ -1,118 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Contact list</title>
-	<link tyde="text/css" rel="stylesheet" href="index.css">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Contact list</title>
+    <meta charset="UTF-8">
+
+    <link tyde="text/css" rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-            $(document).ready(function(){
-                $("#btn6").click(function(){
+            /**
+             * @todo 用 http://www.w3school.com.cn/jquery/jquery_ref_traversing.asp 来遍历，避免 btn1/2/4 这样的写法
+             */
+            $(document).ready(function() {
+                $("#btn6").click(function() {
                     $("#show1").fadeOut(1000);
                 });
-                $("#btn8").click(function(){
+                $("#btn8").click(function() {
                     $("#show2").fadeOut(1000);
                 });
 
-                $("#three2.btn4").click(function(){
+                $("#three2.btn4").click(function() {
                     $("#show3").fadeOut(1000);
                 });
-                $("#btn5").click(function(){
+                $("#btn5").click(function() {
                     $("#one0").html("<input type=text>");
                     $("#two0").html("<input type=text>");
                     $("#btn5").val("确认修改");
                 });
-
-                $("#btn7").click(function(){
+                $("#btn7").click(function() {
                     $("#one1").html("<input type=text>");
                     $("#two1").html("<input type=text>");
                     $("#btn7").val("确认修改");
                 });
-            $("#btn1").click(function(){
-                if (checkall()){
-                    "#show3".innerHTML = functionName();
-                };
-                function functionName(){
-                    $("#one2").append($("#text").val());
-                    $("#two2").append($("#text1").val());
-                    $("#three2").append($("#btn2").html());
-                    $("#text").val("");
-                    $("#text1").val("");
-                };
-                 });
-                function checkall(){
+                $("#btn1").click(function() {
+                    if (checkAll()) {
+                        $("#show3").innerHTML = functionName(); // @todo functionName 是什么？
+                    }
+                    function functionName() {
+                        $("#one2").append($("#text").val());
+                        $("#two2").append($("#text1").val());
+                        $("#three2").append($("#btn2").html());
+                        $("#text").val("");
+                        $("#text1").val("");
+                    }
+                });
+                function checkAll() {
                     var name = $("#text");
-                    var Numbers = $("#text1");
-                if(name.val() == ""){
+                    var numbers = $("#text1");
+                    if (name.val() == "") {
                         alert("请输入内容！");
                         return false;
+                    } else {
+                        if (numbers.val() == "") {
+                            alert("请输入电话！");
+                            return false;
+                        }
+                    } else {
+                        return true;
                     }
-                    else 
-                if(Numbers.val() == ""){
-                        alert("请输入电话！");
-                        return false;
-                    }
-                    else return true;
                 }
-            });   
-	</script>
+            });
+    </script>
 </head>
-<body>	
+<body>
     <div id="biaoge">
         <p id="btn2">
             <input id="btn3" type="button" value="修改">
             <input id="btn4" type="button" value="删除">
         </p>
         <table>
-        	<caption>
-        		联系人列表
-        	</caption>
-        	<tr>
-        		<th>姓名</th>
-        		<th>电话</th>
-        		<th>操作</th>
-        	</tr>
-        	<tr id="show1">        	
-        		<td id="one0">周迅</td>
-        		<td id="two0">13547093222</td>
-        		<td id="three0"> 
+            <caption>
+                联系人列表
+            </caption>
+            <tr>
+                <th>姓名</th>
+                <th>电话</th>
+                <th>操作</th>
+            </tr>
+            <tr id="show1">
+                <td id="one0">周迅</td>
+                <td id="two0">13547093222</td>
+                <td id="three0">
             <input id="btn5" type="button" value="修改">
             <input id="btn6" type="button" value="删除">
                 </td>
-        	</tr>
-            <tr id="show2">          
+            </tr>
+            <tr id="show2">
                 <td id="one1">科忠</td>
                 <td id="two1">12345677711</td>
-                <td id="three1"> 
+                <td id="three1">
             <input id="btn7" type="button" value="修改">
             <input id="btn8" type="button" value="删除">
                 </td>
             </tr>
-            <tr id="show3">          
+            <tr id="show3">
                 <td id="one2"> </td>
                 <td id="two2"> </td>
                 <td id="three2"> </td>
             </tr>
-            <tr id="show">          
-                <td id="one11"> 
+            <tr id="show">
+                <td id="one11">
                     <span id="span1">姓名：</span>
-                    <input id="text" type="text" onkeyup="value=value.replace(/[\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength=10 name="Numbers"/>
+                    <input id="text" type="text" onkeyup="value=value.replace(/[\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength=10 name="numbers"/>
                 </td>
-                <td id="two22"> 
+                <td id="two22">
                     <span id="span2">电话：</span>
-                    <input id="text1" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" 
+                    <input id="text1" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"
            onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
                 </td>
-                <td id="three33"> 
+                <td id="three33">
                     <input id="btn1" type="button" value="添加">
                 </td>
             </tr>
-
         </table>
     </div>
     <p>目前联系人列表的问题：</p>
-    <p>1,“修改”按钮功能没有最终实现（“确认修改”按钮功能未实现。</p>
-    <p>2,整个表格不能持续添加（代码太初级）。</p>
-    <p>3,新添加的两个按钮（“修改”，“删除”），功能未实现。</p>
-    <p>4,重复添加到同一个表格中。</p>
+    <p>1. “修改”按钮功能没有最终实现（“确认修改”按钮功能未实现。</p>
+    <p>2. 整个表格不能持续添加（代码太初级）。</p>
+    <p>3. 新添加的两个按钮（“修改”，“删除”），功能未实现。</p>
+    <p>4. 重复添加到同一个表格中。</p>
 </body>
 </html>
